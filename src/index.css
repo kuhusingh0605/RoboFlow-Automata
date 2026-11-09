@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-canvas: #F2F2F0;
+  --color-canvas-dark: #16191D;
+  --color-ink: #111111;
+  --color-ink-secondary: #6E7277;
+  --color-ink-muted: #A0A3A7;
+  --color-ink-dark: #F2F2EF;
+  --color-accent-blue: #65B9E8;
+  --color-accent-blue-soft: #B7DFF1;
+  --color-accent-blue-light: #E5F4FB;
+  --color-line: #D5D8DA;
+  --color-line-dark: #2A2F35;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F2F2F0;
+    color: #111111;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: var(--font-serif);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom hairline borders and radial gradients */
+.border-line {
+  border-color: #D5D8DA;
+}
+
+.border-line-dark {
+  border-color: #2A2F35;
+}
+
+/* Subtle radar sweep animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 12s linear infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 6s ease-in-out infinite;
+}
+
+/* Hide scrollbar for clean horizontal flows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

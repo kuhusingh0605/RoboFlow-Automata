@@ -1,0 +1,6 @@
+{
+  "name": "RoboFlow — Automata-Based Warehouse Fleet Simulator",
+  "description": "Simulate autonomous warehouse robot fleets powered by interacting finite-state machines, coordinated motion, and route recovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
